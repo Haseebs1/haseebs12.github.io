@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haseeb's Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <header>
+        <nav class="portfolio-nav">
+            <a href="portfolio.html" class="portfolio-button">
+                View My Full Portfolio <i class="fas fa-arrow-right"></i>
+            </a>
+        </nav>
+        <div class="header-content">
+            <h1>Haseeb's Website</h1>
+            <p class="tagline">
+                <span class="tagline-part">Computer Science Student</span>
+                <span class="tagline-separator">|</span>
+                <span class="tagline-part">Tech Enthusiast</span>
+                <span class="tagline-separator">|</span>
+                <span class="tagline-part">Future Innovator</span>
+            </p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="photo-container">
+            <div class="photo">
+                <img src="images/Haseeb-bio-pic.jpg" alt="Haseeb's Profile Photo">
+            </div>
+            <h2 class="name-title">Haseeb Shahzad</h2>
+        </div>
+
+        <div class="content">
+            <h2>About Me</h2>
+            <p>As a computer science student at the University of Houston, I'm part of an exciting journey at the forefront of technology and innovation. Immersed in a dynamic and diverse academic environment, I'm developing both the theoretical foundations and practical skills necessary to navigate the ever-evolving tech landscape.</p>
+            <p>Whether I'm delving into algorithm design, software engineering, or web development, my studies equip me with the tools to solve complex problems and create impactful solutions. Balancing coursework, projects, and my work at Walmart, I demonstrate resilience and dedication.</p>
+
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card" data-modal="programmingModal">
+                    <i class="fas fa-code"></i> Programming
+                </div>
+                <div class="skill-card" data-modal="webdevModal">
+                    <i class="fas fa-laptop-code"></i> Web Development
+                </div>
+                <div class="skill-card" data-modal="databaseModal">
+                    <i class="fas fa-database"></i> Databases
+                </div>
+                <div class="skill-card" data-modal="collabModal">
+                    <i class="fas fa-users"></i> Team Collaboration
+                </div>
+                <div class="skill-card" data-modal="problemModal">
+                    <i class="fas fa-lightbulb"></i> Problem Solving
+                </div>
+                <div class="skill-card" data-modal="softwareModal">
+                    <i class="fas fa-project-diagram"></i> Software Engineering
+                </div>
+            </div>
+
+            <h2>My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>University of Houston</h3>
+                        <p>Bachelor of Science in Computer Science</p>
+                        <p>2023 - Present</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>LoneStar College</h3>
+                        <p>Associate of Science in Computer Science</p>
+                        <p>2020 - 2023</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Walmart</h3>
+                        <p>Frontend Team Associate</p>
+                        <p>2020 - Present</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Get In Touch</h2>
+            <div class="social-icons">
+                <a href="mailto:haseebs1@outlook.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                    <span class="social-label">Email</span>
+                    <span class="social-tooltip">Email Me</span>
+                </a>
+                <a href="https://github.com/Haseebs1" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                    <span class="social-label">GitHub</span>
+                    <span class="social-tooltip">View My Projects</span>
+                </a>
+                <a href="https://www.linkedin.com/in/haseeb-shahzad-8863b42b7" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="social-label">LinkedIn</span>
+                    <span class="social-tooltip">Connect With Me</span>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fas fa-file-pdf"></i>
+                    <span class="social-label">Resume</span>
+                    <span class="social-tooltip">Download Resume</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- Skill Detail Modals -->
+    <div class="skill-modal" id="programmingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Programming Skills</h3>
+            <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill-modal" id="webdevModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Web Development Skills</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>React</li>
+                <li>Flask</li>
+                <li>Responsive Design</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill-modal" id="databaseModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Database Skills</h3>
+            <ul>
+                <li>SQL</li>
+                <li>MySQL</li>
+                <li>NoSQL</li>
+                <li>Database Design</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill-modal" id="collabModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Team Collaboration</h3>
+            <ul>
+                <li>Agile Methodology</li>
+                <li>Git Version Control</li>
+                <li>Team Leadership</li>
+                <li>Project Management</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill-modal" id="problemModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Problem Solving</h3>
+            <ul>
+                <li>Algorithm Design</li>
+                <li>Debugging</li>
+                <li>Critical Thinking</li>
+                <li>Creative Solutions</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill-modal" id="softwareModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Software Engineering</h3>
+            <ul>
+                <li>System Design</li>
+                <li>Software Architecture</li>
+                <li>Testing & QA</li>
+                <li>Documentation</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Haseeb Shahzad. Crafted with <span class="heart">🐦‍🔥</span>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
