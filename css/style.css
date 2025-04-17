@@ -73,6 +73,26 @@ body {
     transform: translateX(3px);
 }
 
+/* Mobile-specific button adjustments */
+@media (max-width: 768px) {
+    .portfolio-nav {
+        position: relative;
+        top: auto;
+        right: auto;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .portfolio-button {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    header {
+        padding-top: 20px !important; /* Reset any padding */
+    }
+}
+
 /* Adjust header to accommodate button */
 header {
     position: relative;
@@ -870,6 +890,126 @@ footer a:hover {
     .timeline-item:nth-child(odd)::after {
         right: auto;
         left: 21px;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* General spacing */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .container {
+        margin: 10px;
+        padding: 10px;
+        width: calc(100% - 20px);
+    }
+    
+    /* Header adjustments */
+    header {
+        padding: 20px 10px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tagline {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    /* Photo sizing */
+    .photo {
+        width: 150px;
+        height: 150px;
+        margin: 10px auto;
+    }
+    
+    /* Content layout */
+    .content {
+        padding: 15px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+    
+    /* Skills container */
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    /* Project cards */
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Timeline adjustments */
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item::after {
+        left: 21px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Social icons */
+    .social-icons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 480px) {
+    .photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .project-image {
+        height: 150px;
+    }
+    
+    .project-title {
+        font-size: 1.3rem;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
+    }
+    
+    .project-link {
+        padding: 6px 12px;
+        font-size: 0.9rem;
     }
 }
 

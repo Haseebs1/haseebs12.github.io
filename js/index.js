@@ -133,3 +133,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // (Keep your existing dark mode, particles, timeline, and tilt code)
 });
+
+// Better touch support
+document.addEventListener('DOMContentLoaded', function() {
+    // Add touch class to body
+    document.body.classList.add('touch-device');
+    
+    // Prevent double-tap zoom on buttons
+    const buttons = document.querySelectorAll('button, a');
+    buttons.forEach(btn => {
+        btn.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            this.click();
+        });
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});

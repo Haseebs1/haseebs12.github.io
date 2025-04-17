@@ -108,27 +108,52 @@ body.dark-mode .project-description {
 
 /* Back button */
 .back-button {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 20px;
     z-index: 100;
 }
 
 .back-button a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 10px 15px;
-    background: var(--primary);
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     color: white;
-    border-radius: 30px;
     text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .back-button a:hover {
-    background: var(--accent);
-    transform: translateX(-5px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, var(--secondary), var(--primary));
+    border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .back-button {
+        position: relative;
+        margin-bottom: 20px;
+        top: auto;
+        right: auto;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .back-button a {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    header {
+        padding-top: 20px !important; /* Reset any padding */
+    }
 }
 
 /* Video Modal Styles */
@@ -204,4 +229,59 @@ body.dark-mode .project-description {
 /* Dark mode support */
 body.dark-mode .video-modal-content {
     background: #222;
+}
+
+/* Coming Soon Card Styles */
+.coming-soon {
+    position: relative;
+    opacity: 0.9;
+    border-left: 4px solid var(--accent);
+}
+
+.coming-soon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 32, 39, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent);
+    z-index: 2;
+}
+
+.coming-soon-overlay i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.coming-soon-overlay span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.project-link.notify {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.project-link.notify:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Animation */
+@keyframes subtleGlow {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+.coming-soon .project-image img {
+    animation: subtleGlow 3s infinite;
 }
