@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haseeb's Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/port_style.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-button">
+        <a href="index.html">
+            <i class="fas fa-arrow-left"></i> Back to Main
+        </a>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <h1>My Projects</h1>
+            <p class="tagline">
+                <span class="tagline-part">Web Development</span>
+                <span class="tagline-separator">|</span>
+                <span class="tagline-part">Software Engineering</span>
+                <span class="tagline-separator">|</span>
+                <span class="tagline-part">Academic Work</span>
+            </p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/pers_web.png" alt="Personal Website Project">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Personal Portfolio Website</h3>
+                        <p class="project-description">
+                            A responsive personal website showcasing my skills, education, and projects. 
+                            Built with modern HTML5, CSS3, and JavaScript with interactive elements.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">CSS3</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">Responsive Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Haseebs1/haseebwebsite" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="index.html" class="project-link demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/aca_form.png" alt="Academic Form Submission">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Academic Form Submission System</h3>
+                        <p class="project-description">
+                            A role-based web application utilizing Microsoft365 for user authentication. Basic users submit academic forms, generating PDFs with LaTeX and storing them in an Azure SQL database. Admins review submitted forms via an interactive dashboard.
+                        </p>                
+                        <div class="project-tech">
+                            <span class="tech-pill">Python Flask</span>
+                            <span class="tech-pill">HTML/CSS</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">Azure SQL</span>
+                            <span class="tech-pill">LaTeX</span>
+                        </div>                
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link demo" onclick="openVideoModal('Z1xFjmttEvY')">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <span class="close-video-modal">&times;</span>
+            <div class="video-container">
+                <iframe id="youtubeVideo" width="560" height="315" src="" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/portfolio.js"></script>
+
+    <footer>
+        © 2025 Haseeb Shahzad. Crafted with <span class="heart">❤</span>
+    </footer>
+
+    <script src="js/portfolio.js"></script>
+</body>
+</html>
